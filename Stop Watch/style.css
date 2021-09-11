@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
+:root {
+    --mainColor1: #3DBE29;
+    --mainColor2: #EDC126; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-family: 'Zen Loop', cursive;
+    background-color: #111;
+    text-transform: uppercase;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container {
+    width: 60%;
+    height: 100vh;
+    margin: 100px auto;
+}
+.stopWatch {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: lighter;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hourDiv, 
+.minuteDiv, 
+.secondDiv, 
+.milliSecondDiv {
+    width: 24%;
+    border-radius: 50%;
+    background-color: red;
+}
+.hour, 
+.minute, 
+.second, 
+.milliSecond {
+    padding: 5px;
+    
+}
+.hourTitle, 
+.minuteTitle, 
+.secondTitle, 
+.milliSecondTitle {
+    background-color: green;
+    font-size: 2.5rem;
+    padding: 5px;
+    font-weight: bold;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.button {
+    border: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    padding: 5px;
+    width: 170px;
+    font-weight: bold;
+    font-family: 'Zen Loop', cursive;
+}
+.start {
+    margin-right: 5%;
+    color: red;
+    transition: 0.5s ease-in-out;
+}
+.start:hover{
+    background-color: red;
+    color: #fff;
+}
+.pause {
+    transition: 0.5s ease-in-out;
+    color: #E03B8B;
+}
+.pause:hover {
+    background-color: #EE30E0;
+    color: #fff;
+}
+.stop {
+    margin-left: 5%;
+    color: green;
+    transition: 0.5s ease-in-out;
+}
+.stop:hover {
+    background-color: green;
+    color: #fff;
+}
+.mainButton {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    .stopWatch {
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hourTitle, 
+    .minuteTitle, 
+    .secondTitle, 
+    .milliSecondTitle {
+        font-size: 2rem;
+    }
+    .button {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 50%;
+    }
+    .start, .stop {
+        margin: 0;
+    }
+    .mainButton {
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 550px) {
+    .stopWatch {
+        font-size: 2rem;
+    }
+    .hourTitle, 
+    .minuteTitle, 
+    .secondTitle, 
+    .milliSecondTitle {
+        font-size: 1.5rem;
+    }
+}
